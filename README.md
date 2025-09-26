@@ -99,3 +99,11 @@ It follows a complete data analysis pipeline, including:
 git clone https://github.com/junaidshah2001/SpaceX-Falcon9-Landing-Prediction.git
 cd SpaceX-Falcon9-Landing-Prediction
 
+python -m venv venv
+source venv/bin/activate      # Linux / Mac
+venv\Scripts\activate         # Windows
+
+pip install -r requirements.txt
+
+jupyter notebook
+
