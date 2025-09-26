@@ -97,7 +97,7 @@ It follows a complete data analysis pipeline, including:
 1. Clone the repository:
 ```bash
 https://github.com/junaidshah2001/SpaceX-Falcon9-Landing-Prediction.git
-requirement.txt
+pip install -r requirements.txt
 pandas
 numpy
 scikit-learn
@@ -112,3 +112,4 @@ dash-core-components
 dash-html-components
 folium
 geopy  # Likely used for calculating distances in Geo Analysis
+
