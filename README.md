@@ -97,4 +97,18 @@ It follows a complete data analysis pipeline, including:
 1. Clone the repository:
 ```bash
 https://github.com/junaidshah2001/SpaceX-Falcon9-Landing-Prediction.git
-
+requirement.txt
+pandas
+numpy
+scikit-learn
+scipy
+matplotlib
+seaborn
+requests
+beautifulsoup4  # Often used for web scraping in data prep
+plotly
+dash
+dash-core-components
+dash-html-components
+folium
+geopy  # Likely used for calculating distances in Geo Analysis
