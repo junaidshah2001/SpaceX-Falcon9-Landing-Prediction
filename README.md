@@ -1,77 +1,101 @@
-🚀 SpaceX Falcon 9 Booster Reusability Prediction and Comprehensive Analysis
-Project Overview
-This is an end-to-end data science project focused on the historical flight data of the SpaceX Falcon 9 rocket. The primary goal is to develop a robust machine learning model capable of predicting the success of the first-stage booster landing (reusability).
+# 🚀 SpaceX Falcon 9 Booster Reusability Prediction and Analysis
 
-The project follows a complete, structured data analysis pipeline, covering everything from raw data collection and cleaning to advanced geospatial analysis, dynamic dashboarding, and final model training.
+[![Python](https://img.shields.io/badge/python-3.8+-blue)](https://www.python.org/)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-🎯 Key Objectives
-Data Engineering: Aggregate and clean launch data from multiple sources (API, Web Scraping) and engineer a reliable binary target variable (Class).
+---
 
-Exploratory Analysis (EDA): Utilize SQL and geospatial techniques to uncover key trends, risk factors, and strategic launch site placements.
+## **Project Overview**
 
-Business Intelligence (BI): Create an interactive dashboard for stakeholders to visually assess performance and confirm analytical hypotheses.
+This project is an end-to-end data science analysis of historical SpaceX Falcon 9 rocket flights.  
+The goal is to **predict the success of first-stage booster landings** using machine learning.  
 
-Machine Learning: Train and evaluate multiple supervised classification models to find the most accurate predictor of landing success.
+It follows a complete data analysis pipeline, including:
 
-📊 Key Findings and Results
-1. Model Performance (Prediction)
-Four machine learning models were trained and tuned on the final feature-engineered dataset:
+- Data collection and cleaning  
+- Exploratory data and geospatial analysis  
+- Dashboarding for stakeholders  
+- Model training and evaluation  
 
-Logistic Regression: Achieved a test accuracy of 83.33%. This model performs well, indicating a linear relationship between some features and the landing outcome.
+---
 
-Support Vector Machine (SVM): Also achieved a test accuracy of 83.33%, demonstrating strong separation capability.
+## **Key Objectives**
 
-K-Nearest Neighbors (KNN): Matched the top accuracy score of 83.33%, suggesting that success/failure cases cluster well in the feature space.
+1. **Data Engineering**  
+   - Aggregate and clean launch data from multiple sources (API, Wikipedia)  
+   - Create a reliable binary target variable (`Class`) for landing success  
 
-Decision Tree: Achieved a lower test accuracy of 77.78%, making it less reliable than the other three models.
+2. **Exploratory Data Analysis (EDA)**  
+   - SQL and geospatial techniques to find trends, risk factors, and launch site insights  
 
-2. Strategic Insights (Geospatial Analysis)
-The analysis of launch site locations using Folium confirmed a strategic balance between logistics and safety:
+3. **Business Intelligence (BI)**  
+   - Interactive dashboard to visualize launch success rates  
 
-Logistics: Launch sites show close proximity to highways (around 0.72 km) and railways to facilitate transportation of components.
+4. **Machine Learning**  
+   - Train multiple classification models to predict booster landing success  
 
-Safety: Sites are intentionally located near the coastline (around 0.58 km) to allow launches over the ocean and maintain a safe distance from major cities (e.g., over 23 km from Titusville, FL for CCAFS LC-40).
+---
 
-🛠️ Project Workflow (Notebooks)
-The entire project is documented step-by-step across the following six Jupyter Notebooks, located in the notebooks/ directory.
+## **Key Findings**
 
-Phase 1: Data Preparation
-SpaceX_Falcon9_Data_Prep.ipynb: Focuses on combining data from the SpaceX API and historical records (Wikipedia) into a unified raw dataset.
+### **1. Model Performance**
+| Model                    | Test Accuracy |
+|---------------------------|---------------|
+| Logistic Regression       | 83.33%        |
+| Support Vector Machine    | 83.33%        |
+| K-Nearest Neighbors       | 83.33%        |
+| Decision Tree             | 77.78%        |
 
-SpaceX_Falcon9_data_wrangling_feature_engineering.ipynb: Cleans the data, handles missing values (using mean imputation for PayloadMass), and creates the binary target variable (Class) and the No. of Flights feature.
+**Insights:**  
+- Logistic Regression, SVM, and KNN perform best.  
+- Decision Tree shows slightly lower performance due to potential overfitting.  
 
-Phase 2: Exploratory Data Analysis (EDA)
-SpaceX_Falcon9_Launches_SQL_Analysis.ipynb: Performs strategic EDA using SQL queries on a temporary database to calculate KPIs like success rates by Orbit and LaunchSite.
+---
 
-SpaceX_Falcon9_Geo_Analysis.ipynb: Uses Folium and geospatial distance calculations to map launch sites and analyze their strategic placement relative to key infrastructure and populated areas.
+### **2. Geospatial Analysis**
+- **Logistics:** Launch sites near highways (~0.72 km) and railways for transport  
+- **Safety:** Sites near coastlines (~0.58 km) and away from cities (e.g., 23+ km from Titusville, FL)  
 
-Phase 3: Deployment and Prediction
-SpaceX_Falcon9_Dashboard.ipynb: Implements a dynamic BI dashboard using Dash and Plotly to enable visual exploration of success rates filtered by Launch Site and Payload Mass range.
+---
 
-SpaceX_Falcon9_Landing_Prediction.ipynb: The final step: prepares data (standardization, split), tunes hyperparameters, and evaluates the performance of the four supervised classification models.
+## **Project Workflow (Notebooks)**
 
-⚙️ Installation and Setup
-Prerequisites
-Python 3.8+
+### **Phase 1: Data Preparation**
+1. `SpaceX_Falcon9_Data_Prep.ipynb`  
+   - Combine API and historical data into a raw dataset  
 
-Git
+2. `SpaceX_Falcon9_data_wrangling_feature_engineering.ipynb`  
+   - Clean data, handle missing values, create target variable (`Class`) and `No. of Flights`  
 
-Setup Instructions
-Clone the Repository:
+---
 
-git clone [https://github.com/YourUsername/SpaceX-Falcon9-Landing-Prediction.git](https://github.com/YourUsername/SpaceX-Falcon9-Landing-Prediction.git)
+### **Phase 2: Exploratory Data Analysis (EDA)**
+3. `SpaceX_Falcon9_Launches_SQL_Analysis.ipynb`  
+   - SQL queries to calculate KPIs like success rates by Orbit and LaunchSite  
+
+4. `SpaceX_Falcon9_Geo_Analysis.ipynb`  
+   - Geospatial analysis using Folium to map launch sites and analyze placement  
+
+---
+
+### **Phase 3: Deployment and Prediction**
+5. `SpaceX_Falcon9_Dashboard.ipynb`  
+   - Interactive dashboard with Dash and Plotly  
+
+6. `SpaceX_Falcon9_Landing_Prediction.ipynb`  
+   - Data preparation, hyperparameter tuning, and model evaluation  
+
+---
+
+## **Installation and Setup**
+
+### **Prerequisites**
+- Python 3.8+  
+- Git  
+
+### **Setup Instructions**
+1. Clone the repository:
+```bash
+git clone https://github.com/YourUsername/SpaceX-Falcon9-Landing-Prediction.git
 cd SpaceX-Falcon9-Landing-Prediction
 
-Create Virtual Environment:
-
-python -m venv venv
-source venv/bin/activate  # Use `venv\Scripts\activate` on Windows
-
-Install Dependencies:
-
-pip install -r requirements.txt
-
-Running the Analysis
-After setup, launch Jupyter and execute the notebooks in numerical order (1 through 6) to reproduce the entire project pipeline:
-
-jupyter notebook
