@@ -96,5 +96,5 @@ It follows a complete data analysis pipeline, including:
 ### **Setup Instructions**
 1. Clone the repository:
 ```bash
-https://github.com/YourUsername/SpaceX-Falcon9-Landing-Prediction.git
+https://github.com/junaidshah2001/SpaceX-Falcon9-Landing-Prediction.git
 
